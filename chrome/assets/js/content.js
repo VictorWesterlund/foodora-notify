@@ -6,8 +6,9 @@ class FoodoraNotify {
 
         // Send ETA update notification each time the ETA text updates on screen
         this.observer.observe(this.eta, {
-            attributes: true,
-            childList: true,
+            characterData: true,
+            attributes: false,
+            childList: false,
             subtree: true
         });
     }
